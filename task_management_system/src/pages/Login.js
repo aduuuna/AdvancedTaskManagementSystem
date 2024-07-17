@@ -13,32 +13,45 @@ function LoginPage() {
 
   return (
     <div className="login-container">
-      <form onSubmit={handleSubmit} className="login-form">
-        <h2>Login</h2>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+      <div className="login-content">
+        <div className="login-div1">
+          <div className="login-div1A">
+            <p className="text1">
+              Great to see you! <br /> Enter your credentials to log in.
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="login-form">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+        <div className="login-div2">
+          <button type="submit" className="login-button">
+            Login
+          </button>
+          <div className="login-div2B">
+            <p>
+              New here? <span className="text2">Create account.</span>
+            </p>
+          </div>
         </div>
-        <button type="submit" className="login-button">
-          Login
-        </button>
-      </form>
+      </div>
     </div>
   );
 }
