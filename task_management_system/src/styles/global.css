@@ -1,3 +1,5 @@
+/* LOGIN PAGE */ /* LOGIN PAGE */ /* LOGIN PAGE */ /* LOGIN PAGE */
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -103,8 +105,8 @@ input:focus {
 }
 
 .login-button:hover {
-  background-color: white;
-  color: black;
+  background-color: #325ac8;
+  color: white;
   border: 3px solid #1a2a57;
 }
 
@@ -118,4 +120,106 @@ input:focus {
 }
 .text2:hover {
   color: #ffa366;
+}
+
+/* SIGN UP PAGE */ /* SIGN UP PAGE */ /* SIGN UP PAGE */ /* SIGN UP PAGE */
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+}
+.signup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  height: 500px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #1a2a57;
+}
+.signup-div1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 280px;
+  width: 100%;
+  max-width: 290px;
+  padding: 10px;
+
+  flex-direction: column;
+}
+.signup-div1A {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 30px;
+  width: 100%;
+  max-width: 280px;
+  padding: 10px;
+}
+
+.signup-form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 200px;
+  max-width: 280px;
+  padding: 10px;
+}
+.signup-div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  width: 100%;
+  max-width: 290px;
+  padding: 10px;
+}
+.signup-div2B {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 100%;
+  max-width: 280px;
+  padding: 10px;
+
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.signup-button {
+  width: 100%;
+  max-width: 280px;
+  padding: 0.75rem;
+  background-color: #1a2a57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-button:hover {
+  background-color: #325ac8;
+  color: white;
+  border: 3px solid #1a2a57;
+}
+
+.signup-button:active {
+  background-color: #1a2a57;
+  color: white;
 }
