@@ -57,3 +57,6 @@ This project goes beyond a simple to-do list, incorporating features that demons
 7. **Styling**: Use a CSS-in-JS solution like styled-components or CSS modules
 8. **Accessibility**: Ensure the app is accessible (ARIA attributes, keyboard navigation)
 9. **Animation**: Incorporate smooth transitions and animations
+
+## FIGMA FILE
+https://www.figma.com/design/42iSJneivdY7G5tokZX5vm/Untitled?node-id=0-1&t=FnfKCyy3sTI0sgMc-1
