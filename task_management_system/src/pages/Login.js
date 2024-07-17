@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/global.css";
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -47,7 +48,12 @@ function LoginPage() {
           </button>
           <div className="login-div2B">
             <p>
-              New here? <span className="text2">Create account.</span>
+              New here?{" "}
+              <span className="text2">
+                <Link className="link" to="/signup">
+                  Create account.
+                </Link>
+              </span>
             </p>
           </div>
         </div>

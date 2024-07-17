@@ -223,3 +223,12 @@ input:focus {
   background-color: #1a2a57;
   color: white;
 }
+
+.link {
+  color: #1a2a57;
+  font-weight: 800;
+  text-decoration: none;
+}
+.link:hover {
+  color: #ffa366;
+}

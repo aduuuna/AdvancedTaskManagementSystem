@@ -1,11 +1,22 @@
 import React from "react";
-import LoginPage from "./pages/Login";
-import SignupPage from "./pages/Signup";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import routes from "./route";
 
 function App() {
   return (
-    // <LoginPage />
-    <SignupPage />
+    <Router>
+      <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={<route.component />} />
+        ))}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
   );
 }
 
