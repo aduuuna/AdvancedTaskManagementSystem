@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import "../styles/global.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { login } from "../services/auth";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically handle the login logic
-    console.log("Login attempted with:", email, password);
+    if (login(email, password)) {
+      navigate("/home");
+    } else {
+      alert("Invalid email or password");
+    }
   };
 
   return (
@@ -23,39 +28,43 @@ function LoginPage() {
           </div>
 
           <form onSubmit={handleSubmit} className="login-form">
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+            <div className="A">
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
 
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="B">
+              <button type="submit" className="login-button">
+                Login
+              </button>
+            </div>
           </form>
         </div>
+
         <div className="login-div2">
-          <button type="submit" className="login-button">
-            Login
-          </button>
-          <div className="login-div2B">
-            <p>
-              New here?{" "}
-              <span className="text2">
-                <Link className="link" to="/signup">
-                  Create account.
-                </Link>
-              </span>
-            </p>
-          </div>
+          <p>
+            New here?{" "}
+            <span className="text2">
+              <Link className="link" to="/signup">
+                Create account.
+              </Link>
+            </span>
+          </p>
         </div>
       </div>
     </div>

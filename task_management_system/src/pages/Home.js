@@ -1,11 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { logout, getCurrentUser } from "../services/auth";
 
-const HomePage = () => {
+function HomePage() {
+  const navigate = useNavigate();
+  const user = getCurrentUser();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
+
   return (
     <div>
-      <h1>Home Page</h1>
+      <h2>Welcome, {user.email}</h2>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
-};
+}
 
 export default HomePage;

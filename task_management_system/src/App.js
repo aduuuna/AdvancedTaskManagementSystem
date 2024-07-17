@@ -5,16 +5,26 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import routes from "./route";
+import LoginPage from "./pages/Login";
+import SignupPage from "./pages/Signup";
+import PrivateRoute from "./PrivateRoute";
+import HomePage from "./pages/Home";
 
 function App() {
   return (
     <Router>
       <Routes>
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} element={<route.component />} />
-        ))}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route
+          path="/home"
+          element={
+            <PrivateRoute>
+              <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );

@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 240px;
+  height: 390px;
   width: 100%;
   max-width: 290px;
   padding: 10px;
@@ -38,30 +38,39 @@
   max-width: 280px;
   padding: 10px;
 }
-.text1 {
-}
+
 .login-form {
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  height: 160px;
+  height: 310px;
   max-width: 280px;
   padding: 10px;
 }
-.login-div2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
+.A {
   width: 100%;
-  max-width: 290px;
-  padding: 10px;
+  max-width: 280px;
+  height: 150px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
 }
-.login-div2B {
+
+.B {
+  width: 100%;
+  max-width: 280px;
+  height: 150px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  display: flex;
+}
+
+.login-div2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,28 +78,25 @@
   width: 100%;
   max-width: 280px;
   padding: 10px;
-
-  flex-direction: row;
-  margin-top: 20px;
 }
 
 input {
   height: 50px;
   border-radius: 5px;
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   padding-left: 10px;
 }
 
 input:focus {
   outline: none;
   border-color: #1a2a57;
-  box-shadow: 0 0 0 2px #ffa366;
+  box-shadow: 0 0 0 2px #1a2a57;
 }
 
 .login-button {
   width: 100%;
-  max-width: 280px;
+  max-width: 270px;
   padding: 0.75rem;
   background-color: #1a2a57;
   color: white;
@@ -146,7 +152,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 280px;
+  height: 410px;
   width: 100%;
   max-width: 290px;
   padding: 10px;
@@ -170,19 +176,27 @@ input:focus {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  height: 200px;
+  height: 400px;
   max-width: 280px;
   padding: 10px;
 }
-.signup-div2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 160px;
+.C {
   width: 100%;
-  max-width: 290px;
-  padding: 10px;
+  max-width: 280px;
+  height: 200px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
+}
+.D {
+  width: 100%;
+  max-width: 280px;
+  height: 130px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  display: flex;
 }
 .signup-div2B {
   display: flex;
