@@ -15,10 +15,10 @@ function HomePage() {
     <div className="home-container">
       {/* <h2>Welcome, {user.email}</h2>
       <button onClick={handleLogout}>Logout</button> */}
-      <div class="header">Header</div>
-      <div class="content">
-        <div class="sidebar">Sidebar</div>
-        <div class="main">Main</div>
+      <div className="header">Header</div>
+      <div className="content2">
+        <div className="sidebar">Sidebar</div>
+        <div className="main">Main</div>
       </div>
     </div>
   );

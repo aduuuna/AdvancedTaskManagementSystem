@@ -35,8 +35,9 @@
 
 // SplashScreen.js
 import React, { useState, useEffect } from "react";
-import VideoBusy from "../assets/videos/busy.mp4";
+
 import "../styles/global.css"; // Make sure to create this CSS file
+import VideoBackground from "../components/common/VideoBackground";
 
 const SplashScreen = () => {
   const [text, setText] = useState("");
@@ -59,10 +60,11 @@ const SplashScreen = () => {
 
   return (
     <div className="splash-screen-content">
-      <h1 className={`title ${isTypingDone ? "color-change" : ""}`}>{text}</h1>
-      <video autoPlay loop muted className="videoBusy">
-        <source src={VideoBusy} type="video/mp4" />
-      </video>
+      <VideoBackground>
+        <h1 className={`title ${isTypingDone ? "color-change" : ""}`}>
+          {text}
+        </h1>
+      </VideoBackground>
     </div>
   );
 };
