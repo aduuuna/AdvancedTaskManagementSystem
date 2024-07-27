@@ -1,10 +1,20 @@
+:root {
+  --primary-color: #1a2a57;
+  --secondary-color: #ffa366;
+  --tertiary-color: white;
+  --font-family: "Arial, sans-serif";
+  --font-size: 16px;
+  --header-font-size: 24px;
+  --paragraph-font-size: 14px;
+}
+
 /* LOGIN PAGE */ /* LOGIN PAGE */ /* LOGIN PAGE */ /* LOGIN PAGE */
 
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--tertiary-color);
   height: 100vh;
 }
 .login-content {
@@ -16,7 +26,7 @@
   height: 500px;
   width: 100%;
   max-width: 300px;
-  border: 1px solid #1a2a57;
+  border: 1px solid var(--primary-color);
 }
 .login-div1 {
   display: flex;
@@ -40,7 +50,7 @@
 }
 
 .login-form {
-  background-color: white;
+  background-color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,21 +98,26 @@ input {
   padding-left: 10px;
 }
 
+input::placeholder {
+  color: var(--primary-color);
+  font-size: var(--paragraph-font-size);
+}
+
 input:focus {
   outline: none;
-  border-color: #1a2a57;
-  box-shadow: 0 0 0 2px #1a2a57;
+  border-color: var(--secondary-color);
+  /* box-shadow: 0 0 0 2px #1a2a57; */
 }
 
 .login-button {
   width: 100%;
   max-width: 270px;
   padding: 0.75rem;
-  background-color: #1a2a57;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: var(--header-font-size);
   cursor: pointer;
   transition: background-color 0.3s ease;
   height: 50px;
@@ -111,14 +126,15 @@ input:focus {
 }
 
 .login-button:hover {
-  background-color: #325ac8;
-  color: white;
-  border: 3px solid #1a2a57;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  font-size: var(--header-font-size);
+  border: 2px solid var(--primary-color);
 }
 
 .login-button:active {
-  background-color: #1a2a57;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 .text2 {
   color: #1a2a57;
@@ -215,11 +231,11 @@ input:focus {
   width: 100%;
   max-width: 280px;
   padding: 0.75rem;
-  background-color: #1a2a57;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
   border: none;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: var(--header-font-size);
   cursor: pointer;
   transition: background-color 0.3s ease;
   height: 50px;
@@ -228,21 +244,102 @@ input:focus {
 }
 
 .signup-button:hover {
-  background-color: #325ac8;
-  color: white;
-  border: 3px solid #1a2a57;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  font-size: var(--header-font-size);
+  border: 2px solid var(--primary-color);
 }
 
 .signup-button:active {
-  background-color: #1a2a57;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
 .link {
-  color: #1a2a57;
+  color: var(--primary-color);
   font-weight: 800;
   text-decoration: none;
+  font-size: var(--font-size);
 }
 .link:hover {
-  color: #ffa366;
+  color: var(--secondary-color);
+}
+/* SPLASH SCREEN */ /* SPLASH SCREEN */ /* SPLASH SCREEN */ /* SPLASH SCREEN */
+.splash-screen-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tertiary-color);
+  height: 100vh;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in;
+  flex-direction: column;
+}
+.videoBusy {
+  width: 800px;
+  height: 50px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.title {
+  font-size: 50px;
+  color: var(--primary-color);
+  font-weight: 800;
+  text-align: center;
+}
+
+.color-change {
+  animation: colorChange 4s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    color: var(--primary-color);
+  }
+  50% {
+    color: var(--secondary-color);
+  }
+  100% {
+    color: var(--primary-color);
+  }
+}
+
+/* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */
+.home-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "content content"
+    "footer footer";
+  grid-gap: 10px;
+  grid-template-rows: 0.2fr 3fr;
+  background-color: var(--tertiary-color);
+  height: 100vh;
+  width: 100%;
+}
+
+.header {
+  grid-area: header;
+  background-color: #8e44ad;
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 0.2fr 3fr;
+  grid-gap: 10px;
+}
+
+.main {
+  background-color: #3498db;
+}
+
+.sidebar {
+  background-color: #e74c3c;
 }

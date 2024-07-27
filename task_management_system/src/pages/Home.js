@@ -12,9 +12,14 @@ function HomePage() {
   };
 
   return (
-    <div>
-      <h2>Welcome, {user.email}</h2>
-      <button onClick={handleLogout}>Logout</button>
+    <div className="home-container">
+      {/* <h2>Welcome, {user.email}</h2>
+      <button onClick={handleLogout}>Logout</button> */}
+      <div class="header">Header</div>
+      <div class="content">
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main</div>
+      </div>
     </div>
   );
 }

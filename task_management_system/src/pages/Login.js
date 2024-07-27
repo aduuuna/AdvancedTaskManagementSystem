@@ -2,20 +2,30 @@ import React, { useState } from "react";
 import "../styles/global.css";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../services/auth";
+import SplashScreen from "./SplashScreen";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showSplash, setShowSplash] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (login(email, password)) {
-      navigate("/home");
+      setShowSplash(true);
+      setTimeout(() => {
+        setShowSplash(false);
+        navigate("/home");
+      }, 2000); // Show splash for 2 seconds after login
     } else {
       alert("Invalid email or password");
     }
   };
+
+  if (showSplash) {
+    return <SplashScreen />;
+  }
 
   return (
     <div className="login-container">

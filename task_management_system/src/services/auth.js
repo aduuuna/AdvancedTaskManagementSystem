@@ -1,4 +1,6 @@
-let fakeUsers = [{ id: 1, email: "user@example.com", password: "password123" }];
+let fakeUsers = [
+  { id: 1, email: "owusujoyansah@gmail.com", password: "026735" },
+];
 
 export const signup = (email, password, confirmPassword) => {
   if (fakeUsers.find((u) => u.email === email)) {
