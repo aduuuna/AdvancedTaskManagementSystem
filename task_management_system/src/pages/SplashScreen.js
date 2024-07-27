@@ -37,7 +37,6 @@
 import React, { useState, useEffect } from "react";
 
 import "../styles/global.css"; // Make sure to create this CSS file
-import VideoBackground from "../components/common/VideoBackground";
 
 const SplashScreen = () => {
   const [text, setText] = useState("");
@@ -60,11 +59,7 @@ const SplashScreen = () => {
 
   return (
     <div className="splash-screen-content">
-      <VideoBackground>
-        <h1 className={`title ${isTypingDone ? "color-change" : ""}`}>
-          {text}
-        </h1>
-      </VideoBackground>
+      <h1 className={`title ${isTypingDone ? "color-change" : ""}`}>{text}</h1>
     </div>
   );
 };

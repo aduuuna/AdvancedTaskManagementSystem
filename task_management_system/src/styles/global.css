@@ -287,7 +287,7 @@ input:focus {
   }
 }
 .title {
-  font-size: 60px;
+  font-size: 30px;
   color: var(--tertiary-color);
   font-weight: 800;
   text-align: center;
