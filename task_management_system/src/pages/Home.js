@@ -15,7 +15,7 @@ function HomePage() {
     <div className="home-container">
       {/* <h2>Welcome, {user.email}</h2>
       <button onClick={handleLogout}>Logout</button> */}
-      <div className="header">Header</div>
+
       <div className="content2">
         <div className="sidebar">Sidebar</div>
         <div className="main">Main</div>

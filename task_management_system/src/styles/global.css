@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 30px;
+  padding: 10px;
   height: 500px;
   width: 100%;
   max-width: 300px;
@@ -57,7 +57,7 @@
   justify-content: space-between;
   width: 100%;
   height: 310px;
-  max-width: 280px;
+
   padding: 10px;
 }
 .A {
@@ -94,7 +94,7 @@ input {
   height: 50px;
   border-radius: 5px;
   width: 100%;
-  max-width: 260px;
+
   padding-left: 10px;
 }
 
@@ -158,11 +158,11 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 30px;
+  padding: 10px;
   height: 500px;
   width: 100%;
   max-width: 300px;
-  border: 1px solid #1a2a57;
+  border: 1px solid var(--primary-color);
 }
 .signup-div1 {
   display: flex;
@@ -198,12 +198,13 @@ input:focus {
 }
 .C {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   height: 200px;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   display: flex;
+  /* border: 2px solid black; */
 }
 .D {
   width: 100%;
@@ -313,27 +314,20 @@ input:focus {
 /* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */ /* HOME PAGE */
 .home-container {
   display: grid;
-  grid-template-areas:
-    "header header"
-    "content content"
-    "footer footer";
-  grid-gap: 10px;
-  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas: "content content";
+  grid-gap: 1px;
   background-color: var(--tertiary-color);
   height: 100vh;
   width: 100%;
   animation: fadeIn 2s ease-in;
-}
-
-.header {
-  grid-area: header;
-  background-color: #8e44ad;
+  margin: 0;
+  padding: 0;
 }
 
 .content2 {
   grid-area: content;
   display: grid;
-  grid-template-columns: 0.2fr 3fr;
+  grid-template-columns: 0.5fr 3fr;
   grid-gap: 10px;
 }
 

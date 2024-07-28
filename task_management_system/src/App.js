@@ -43,7 +43,7 @@ function App() {
     // Simulate loading time
     setTimeout(() => {
       setIsLoading(false);
-    }, 15000); // Show splash screen for 2 seconds
+    }, 15000); //
   }, []);
 
   if (isLoading) {
